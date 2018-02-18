@@ -1,0 +1,3 @@
+index:
+    path: /
+    controller: AwsForHumans\Controller\HomeController::index
