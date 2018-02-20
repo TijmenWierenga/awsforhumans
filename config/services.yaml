@@ -2,6 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
 
+
 services:
     # default configuration for services in *this* file
     _defaults:
@@ -27,4 +28,4 @@ services:
     # please note that last definitions always *replace* previous ones
 
     Contentful\Delivery\Client:
-        arguments: ["4bb51e5dbff49ca3aabd3f02dfb0aa305751129d57bf5874f0a3e5253d396060", "61uzwxbkelbk"]
+        arguments: ["%env(CONTENTFUL_SPACE_ID)%", "%env(CONTENTFUL_DELIVERY_API_TOKEN)%"]
