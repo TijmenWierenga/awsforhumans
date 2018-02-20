@@ -12,6 +12,12 @@
   "author": "Tijmen Wierenga <t.wierenga@live.nl>",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^3.11.0"
+    "@symfony/webpack-encore": "^0.19.0",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "tailwindcss": "^0.4.1",
+    "webpack": "^3.11.0",
+    "webpack-notifier": "^1.5.1"
   }
 }
