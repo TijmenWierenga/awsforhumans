@@ -8,3 +8,5 @@
 ###< symfony/framework-bundle ###
 
 /node_modules
+yarn-error.log
+/.cache/
