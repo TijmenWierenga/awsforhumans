@@ -1,0 +1,19 @@
+nav {
+  @apply bg-grey-lighter;
+
+  ul {
+    @apply flex list-reset py-2;
+
+    li {
+      @apply mr-4 p-2;
+
+      a {
+        @apply text-grey no-underline;
+
+        &:hover {
+          @apply text-grey-darker;
+        }
+      }
+    }
+  }
+}
