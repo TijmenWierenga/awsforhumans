@@ -9,13 +9,28 @@
     <title>AWS For Humans</title>
 </head>
 <body>
-    <div>
-        <nav>
+    <div class="nav-container">
+        <nav class="container mx-auto">
+            <div class="flex justify-center">
+                <a class="logo" href="{{ path("home") }}">
+                    <svg class="fill-current mr-4" version="1.1" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 478.165 478.165" xml:space="preserve">
+                        <g>
+                            <path d="M0,92.027l212.484,71.386v313.756L1.395,402.635 M264.824,478.165l213.341-75.53V94.119L265.66,162.456
+                         M238.843,126.753l194.992-65.628L238.843,0L39.249,61.105"></path>
+                        </g>
+                    </svg>
+                    <span>AWS For Humans</span>
+                </a>
+            </div>
             <ul>
-                <li><a class="btn btn-primary" href="#">Home</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">About</a></li>
+                <li><a class="current" href="#">Articles</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Get involved</a></li>
             </ul>
+            <div class="flex lg:flex-row lg:mb-0 lg:items-center mb-4 px-4">
+                <a class="btn btn-secondary" href="#">Newsletter</a>
+            </div>
         </nav>
     </div>
 </body>

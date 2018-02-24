@@ -1,17 +1,45 @@
-nav {
-  @apply bg-grey-lighter;
+.nav-container {
+  @apply flex bg-grey-lighter border-t-4 border-b border-grey-darkest;
 
-  ul {
-    @apply flex list-reset py-2;
+  @screen lg {
+    @apply border-b-0;
+  }
 
-    li {
-      @apply mr-4 p-2;
+  nav {
+    @apply flex flex-col;
 
-      a {
-        @apply text-grey no-underline;
+    @screen lg {
+      @apply flex-row;
+    }
 
-        &:hover {
-          @apply text-grey-darker;
+    a.logo {
+      @apply inline-flex no-underline items-center content-center px-4 py-2 text-grey-darker;
+    }
+
+    ul {
+      @apply flex flex-col list-reset pt-4 pb-2;
+
+      @screen lg {
+        @apply flex-row flex-grow p-2;
+      }
+
+      li {
+        @apply block px-4 py-2 mb-2;
+
+        @screen lg {
+          @apply mb-0 py-4;
+        }
+
+        a {
+          @apply text-grey no-underline;
+
+          &.current {
+            @apply text-grey-dark;
+          }
+
+          &:hover {
+            @apply text-grey-darker;
+          }
         }
       }
     }
