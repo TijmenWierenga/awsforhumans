@@ -5,13 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#9561E2">
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
     <title>AWS For Humans</title>
 </head>
 <body>
     <div class="nav-container">
         <nav class="container mx-auto">
-            <div class="flex justify-center">
+            <div class="flex items-center justify-between py-2">
                 <a class="logo" href="{{ path("home") }}">
                     <svg class="fill-current mr-4" version="1.1" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 478.165 478.165" xml:space="preserve">
@@ -22,14 +23,21 @@
                     </svg>
                     <span>AWS For Humans</span>
                 </a>
+                <svg class="menu-toggle mr-4" width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect x="4" y="6" rx="1" ry="1" width="24" height="4"></rect>
+                    <rect x="4" y="14" rx="1" ry="1" width="24" height="4"></rect>
+                    <rect x="4" y="22" rx="1" ry="1" width="24" height="4"></rect>
+                </svg>
             </div>
-            <ul>
-                <li><a class="current" href="#">Articles</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Get involved</a></li>
-            </ul>
-            <div class="flex lg:flex-row lg:mb-0 lg:items-center mb-4 px-4">
-                <a class="btn btn-secondary" href="#">Newsletter</a>
+            <div class="items">
+                <ul>
+                    <li><a class="current" href="#">Articles</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Get involved</a></li>
+                </ul>
+                <div class="flex lg:flex-row lg:mb-0 lg:items-center mb-4 px-4">
+                    <a class="btn btn-secondary" href="#">Newsletter</a>
+                </div>
             </div>
         </nav>
     </div>

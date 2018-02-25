@@ -1,9 +1,5 @@
 .nav-container {
-  @apply flex bg-grey-lighter border-t-4 border-b border-grey-darkest;
-
-  @screen lg {
-    @apply border-b-0;
-  }
+  @apply flex bg-grey-lighter border-t-4 border-grey-darkest;
 
   nav {
     @apply flex flex-col;
@@ -12,8 +8,24 @@
       @apply flex-row;
     }
 
+    .menu-toggle {
+      @apply text-grey-darker fill-current;
+
+      @screen lg {
+        @apply hidden;
+      }
+    }
+
     a.logo {
       @apply inline-flex no-underline items-center content-center px-4 py-2 text-grey-darker;
+    }
+
+    .items {
+      @apply flex flex-col border-t border-b bg-grey-lightest;
+
+      @screen lg {
+        @apply flex-row flex-grow border-0 bg-transparent;
+      }
     }
 
     ul {
