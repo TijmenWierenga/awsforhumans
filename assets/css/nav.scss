@@ -21,10 +21,10 @@
     }
 
     .items {
-      @apply flex flex-col border-t border-b bg-grey-lightest;
+      @apply flex flex-grow flex-col border-t border-b bg-grey-lightest;
 
       @screen lg {
-        @apply flex-row flex-grow border-0 bg-transparent;
+        @apply flex-row border-0 bg-transparent;
       }
     }
 
