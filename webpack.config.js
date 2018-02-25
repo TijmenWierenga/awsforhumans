@@ -29,6 +29,9 @@ Encore
     // show OS notifications when builds finish/fail
     .enableBuildNotifications()
 
+    // enable Vue
+    .enableVueLoader()
+
     // create hashed filenames (e.g. app.abc123.css)
     // .enableVersioning()
 ;
