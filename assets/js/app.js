@@ -2,11 +2,13 @@ require('../css/app.scss');
 
 import Vue from 'vue';
 import Navigation from './components/Navigation';
+import NavItem from './components/NavItem';
 
 new Vue({
     el: "#app",
     components: {
-        Navigation
+        Navigation,
+        NavItem
     },
     data: {
         'menuVisible': false,

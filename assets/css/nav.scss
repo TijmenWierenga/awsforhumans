@@ -38,16 +38,16 @@
       li {
         @apply block px-4 py-2 mb-2;
 
+        &.current > a {
+          @apply text-grey-dark;
+        }
+
         @screen lg {
           @apply mb-0 py-4;
         }
 
         a {
           @apply text-grey no-underline;
-
-          &.current {
-            @apply text-grey-dark;
-          }
 
           &:hover {
             @apply text-grey-darker;

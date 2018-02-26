@@ -1,5 +1,5 @@
 <template>
-    <nav class="container mx-auto">
+    <nav class="container mx-auto" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <div class="flex items-center justify-between py-2">
             <slot name="logo"></slot>
             <svg @click="toggleMenu" class="menu-toggle mr-4" width="32" height="32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
