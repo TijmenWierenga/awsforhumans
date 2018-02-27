@@ -9,7 +9,14 @@
     }
 
     .menu-toggle {
-      @apply text-grey-darker fill-current;
+      @apply text-grey-darker;
+      &-open {
+        @apply fill-current;
+      }
+
+      &-close {
+        @apply stroke-current;
+      }
 
       @screen lg {
         @apply hidden;
