@@ -1,0 +1,11 @@
+.author {
+  img {
+    width: 96px;
+    filter: grayscale(100%);
+    vertical-align: middle;
+
+    @screen lg {
+      @apply w-full;
+    }
+  }
+}
