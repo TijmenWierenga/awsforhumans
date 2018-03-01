@@ -1,0 +1,23 @@
+.alert {
+  @apply flex border-0 border-l-4 border-grey p-4 bg-grey-lightest;
+
+  &-content {
+    @apply flex flex-grow flex-col;
+
+    &-title {
+      @apply mb-2 text-xs uppercase font-bold tracking-wide;
+    }
+
+    &-message {
+      @apply text-sm;
+    }
+  }
+
+  &-dismiss {
+    @apply flex items-center text-grey-light stroke-current cursor-pointer ml-4;
+
+    &:hover {
+      @apply text-grey-dark;
+    }
+  }
+}
