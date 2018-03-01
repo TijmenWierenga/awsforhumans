@@ -1,0 +1,24 @@
+<div class="nav-container">
+    <navigation :visible="displayMenu" :toggle-menu="toggleMenu">
+        <a slot="logo" class="logo" href="{{ path("home") }}">
+            <svg class="fill-current mr-4" version="1.1" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 478.165 478.165" xml:space="preserve">
+                        <g>
+                            <path d="M0,92.027l212.484,71.386v313.756L1.395,402.635 M264.824,478.165l213.341-75.53V94.119L265.66,162.456
+                         M238.843,126.753l194.992-65.628L238.843,0L39.249,61.105"></path>
+                        </g>
+                    </svg>
+            <span>AWS For Humans</span>
+        </a>
+        <div slot="items" class="items">
+            <ul>
+                <nav-item class="current" href="/articles" name="Articles"></nav-item>
+                <nav-item href="/videos" name="Videos"></nav-item>
+                <nav-item href="/get-involved" name="Get involved"></nav-item>
+            </ul>
+            <div class="flex lg:flex-row lg:mb-0 lg:items-center mb-4 px-4">
+                <a class="btn btn-secondary" href="#">Newsletter</a>
+            </div>
+        </div>
+    </navigation>
+</div>
