@@ -1,0 +1,7 @@
+.tag {
+  @apply px-4 py-2;
+
+  &-pill {
+    @apply rounded-full bg-grey text-grey-lightest text-xs uppercase font-bold tracking-wide;
+  }
+}
