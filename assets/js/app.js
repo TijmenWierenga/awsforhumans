@@ -1,12 +1,14 @@
 require('../css/app.scss');
 
 import Vue from 'vue';
+import Alert from './components/Alert';
 import Navigation from './components/Navigation';
 import NavItem from './components/NavItem';
 
 new Vue({
     el: "#app",
     components: {
+        Alert,
         Navigation,
         NavItem
     },

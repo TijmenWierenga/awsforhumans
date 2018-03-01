@@ -29,8 +29,13 @@
  * @import "components/forms";
  */
 
-@import "buttons";
-@import "nav";
+@import "base";
+@import "components/alert";
+@import "components/article";
+@import "components/author";
+@import "components/button";
+@import "components/nav";
+@import "components/tag";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
