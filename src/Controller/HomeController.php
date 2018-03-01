@@ -26,6 +26,6 @@ class HomeController extends Controller
 
     public function index(): Response
     {
-        return $this->render('base.html.twig');
+        return $this->render('article.html.twig');
     }
 }

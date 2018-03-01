@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block sidebar_left %}
+    <div class="author flex flex-grow flex-row lg:flex-col">
+        <div>
+            <img src="https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/25310955_10156204238410166_3167002980915933243_o.jpg?oh=d376be752743e4c57f49bbf01a6228ae&oe=5B4C045B"
+                 alt="Tijmen Wierenga">
+        </div>
+        <div class="bg-grey-lighter p-4 leading-normal flex-grow lg:flex-no-grow">
+            <span class="block uppercase text-xs font-bold tracking-wide">Author</span>
+            <span class="block text-sm">Tijmen Wierenga</span>
+        </div>
+        <div class="bg-grey-lighter p-4 leading-normal hidden lg:block">
+            <span class="block uppercase text-xs font-bold tracking-wide">About</span>
+            <span class="block text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque consequatur deleniti doloribus, et eveniet ex, fuga hic id itaque libero maiores nam nesciunt omnis optio pariatur placeat quas quis quo, reiciendis sint voluptates.</span>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <alert class="mb-4 lg:mb-8"
+           title="Registration success"
+           message="So this is a wonderful message explaining why something happened!"></alert>
+    <article>
+        <span class="tag tag-pill inline-block">Premium</span>
+        <h1 class="mt-4 mb-4 leading-tight">Lorem ipsum dolor sit amet.</h1>
+        <p class="mb-2 leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias architecto earum impedit
+            incidunt inventore, minus nihil non odit perspiciatis, sint tempora unde velit! Animi cupiditate
+            ducimus eos facilis, ipsum iste labore obcaecati odit perspiciatis quis reprehenderit
+            repudiandae sunt temporibus tenetur totam vel voluptate? A alias amet aut corporis deleniti
+            deserunt dolores dolorum eos inventore ipsum iusto libero mollitia nisi nostrum recusandae,
+            saepe sit voluptas. Accusamus aliquam amet aut culpa cumque cupiditate, dicta distinctio ea eum
+            fugit ipsum iure libero, nemo perferendis quisquam quos voluptate? A atque consectetur
+            consequuntur delectus eaque iusto libero molestiae natus nostrum, perferendis quaerat quis,
+            vitae.</p>
+        <blockquote class="text-xl my-4 italic leading-normal">"Lorem ipsum dolor sit amet, consectetur adipisicing elit."</blockquote>
+        <p class="mb-2 leading-normal">Consectetur error esse exercitationem harum illum laborum magnam odio odit tempore temporibus?
+            Autem earum possimus velit! Ad autem, cumque dicta dolor earum excepturi illo ipsam libero nisi
+            pariatur possimus praesentium suscipit tempora. Adipisci deserunt iusto placeat tempore.
+            Adipisci consequuntur dicta ex exercitationem facilis inventore nulla quaerat quos recusandae
+            temporibus? Alias architecto atque culpa debitis, dolorum eos hic libero, nemo nihil nostrum
+            odio optio qui quidem recusandae, repellendus vel voluptas! Aliquid atque consequatur
+            consequuntur corporis earum eos esse explicabo harum illo maiores non, nostrum odio odit porro,
+            quas quis, quos recusandae repellat saepe sint sit sunt ut velit veniam voluptates? Fuga!</p>
+        <h2 class="mt-6 mb-2 leading-tight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, tenetur.</h2>
+        <p class="mb-2 leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi itaque quo
+            sapiente vero. Animi aut culpa cum deleniti dicta dolor est excepturi explicabo fugit hic
+            incidunt iste iure iusto laboriosam minima odio provident quam qui quidem quos, tempora
+            voluptas voluptates! Fugiat ipsum minima molestias sit vitae! Cumque, dolores, eum.</p>
+        <h3 class="mt-6 mb-2 leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate error quia tenetur.</h3>
+        <p class="mb-2 leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid aperiam beatae
+            cupiditate dolorum ea est ex fugiat id in inventore ipsa iure magni minus molestiae
+            molestias nemo nisi non officiis perspiciatis porro possimus quibusdam quidem voluptas
+            voluptatum. Adipisci atque autem culpa cupiditate debitis doloribus dolorum eligendi enim
+            facilis fuga inventore laudantium maxime nemo nihil, numquam omnis optio porro possimus quas
+            recusandae, sequi sit, sunt suscipit veniam voluptas. A aperiam dolore, doloremque error
+            excepturi facere hic illo impedit ipsa iusto magnam officia omnis pariatur quae, ratione
+            sapiente sint totam voluptas! Assumenda beatae dolor eos eum libero quidem rem sed?
+            Assumenda commodi consectetur distinctio doloremque eveniet, explicabo facere in incidunt
+            provident quae reiciendis reprehenderit veritatis. Aperiam eaque in ipsum obcaecati
+            voluptatibus.</p>
+    </article>
+{% endblock %}
+
+{% block sidebar_right %}
+    <p>What kind of wonderful content should we put here?</p>
+{% endblock %}
