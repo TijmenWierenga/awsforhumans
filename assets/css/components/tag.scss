@@ -4,4 +4,10 @@
   &-pill {
     @apply rounded-full bg-grey text-grey-lightest text-xs uppercase font-bold tracking-wide;
   }
+
+  &-xs {
+    @apply px-3 py-2;
+
+    font-size: 0.67rem;
+  }
 }

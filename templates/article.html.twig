@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% block title 'This should be the name of the article'%}
+
 {% block sidebar_left %}
     <div class="author flex flex-grow flex-row lg:flex-col">
         <div>
@@ -22,8 +24,12 @@
            title="Registration success"
            message="So this is a wonderful message explaining why something happened!"></alert>
     <article>
-        <span class="tag tag-pill inline-block">Premium</span>
-        <h1 class="mt-4 mb-4 leading-tight">Lorem ipsum dolor sit amet.</h1>
+        <span class="tag tag-pill inline-block mb-4">Premium</span>
+        <video class="w-full" controls>
+            <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <h1 class="my-4 leading-tight">Lorem ipsum dolor sit amet.</h1>
         <p class="mb-2 leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias architecto earum impedit
             incidunt inventore, minus nihil non odit perspiciatis, sint tempora unde velit! Animi cupiditate
             ducimus eos facilis, ipsum iste labore obcaecati odit perspiciatis quis reprehenderit
@@ -63,5 +69,11 @@
 {% endblock %}
 
 {% block sidebar_right %}
-    <p>What kind of wonderful content should we put here?</p>
+    <div>
+        <span class="block uppercase text-xs font-bold tracking-wide mb-4">Tags</span>
+        <span class="inline-block tag tag-pill tag-xs mb-2 mr-1">Automation</span>
+        <span class="inline-block tag tag-pill tag-xs mb-2 mr-1">Security</span>
+        <span class="inline-block tag tag-pill tag-xs mb-2 mr-1">Terraform</span>
+        <span class="inline-block tag tag-pill tag-xs mb-2 mr-1">AWS</span>
+    </div>
 {% endblock %}
