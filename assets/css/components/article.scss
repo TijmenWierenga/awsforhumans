@@ -1,3 +1,37 @@
 article {
   @apply mb-8;
+
+  p {
+    @apply mb-2 leading-normal;
+  }
+
+  h1 {
+    @apply my-4 leading-tight;
+  }
+
+  h2 {
+    @apply mt-6 mb-2 leading-tight;
+  }
+
+  h3 {
+    @apply mt-6 mb-2 leading-normal;
+  }
+
+  blockquote {
+    @apply text-xl my-4 italic leading-normal;
+
+    quotes: "\201C" "\201D";
+
+    &:before {
+      content: open-quote;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+
+  video {
+    @apply w-full;
+  }
 }

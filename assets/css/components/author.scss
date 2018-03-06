@@ -1,4 +1,10 @@
 .author {
+  @apply flex flex-grow flex-row;
+
+  @screen lg {
+    @apply flex-col;
+  }
+
   img {
     width: 96px;
     filter: grayscale(100%);
@@ -7,5 +13,9 @@
     @screen lg {
       @apply w-full;
     }
+  }
+
+  .info {
+    @apply bg-grey-lighter p-4 leading-normal;
   }
 }
