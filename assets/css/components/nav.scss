@@ -1,5 +1,5 @@
 .nav-container {
-  @apply flex bg-grey-lighter border-t-4 border-grey-darkest;
+  @apply flex bg-blue-lighter border-t-4 border-blue-darkest;
 
   nav {
     @apply flex flex-col;
@@ -9,7 +9,7 @@
     }
 
     .menu-toggle {
-      @apply text-grey-darker;
+      @apply text-blue-darker;
       &-open {
         @apply fill-current;
       }
@@ -24,11 +24,11 @@
     }
 
     a.logo {
-      @apply inline-flex no-underline items-center content-center px-4 py-2 text-grey-darker;
+      @apply inline-flex no-underline items-center font-semibold uppercase tracking-wide content-center px-4 py-2 text-blue-darker;
     }
 
     .items {
-      @apply flex flex-grow flex-col border-t border-b bg-grey-lightest;
+      @apply flex flex-grow flex-col border-t border-b bg-blue-lightest;
 
       @screen lg {
         @apply flex-row border-0 bg-transparent;
@@ -46,7 +46,7 @@
         @apply block px-4 py-2 mb-2;
 
         &.current > a {
-          @apply text-grey-dark;
+          @apply text-blue-dark;
         }
 
         @screen lg {
@@ -54,10 +54,10 @@
         }
 
         a {
-          @apply text-grey no-underline;
+          @apply text-blue no-underline;
 
           &:hover {
-            @apply text-grey-darker;
+            @apply text-blue-darker;
           }
         }
       }

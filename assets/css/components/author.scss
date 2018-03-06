@@ -1,5 +1,5 @@
 .author {
-  @apply flex flex-grow flex-row;
+  @apply flex flex-grow flex-row text-blue-darkest;
 
   @screen lg {
     @apply flex-col;
@@ -16,6 +16,6 @@
   }
 
   .info {
-    @apply bg-grey-lighter p-4 leading-normal;
+    @apply bg-blue-lightest p-4 leading-normal;
   }
 }
