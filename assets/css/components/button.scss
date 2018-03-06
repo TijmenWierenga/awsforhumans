@@ -2,18 +2,18 @@
   @apply px-4 py-2 rounded items-center no-underline;
 
   &-primary {
-    @apply bg-blue-darker text-blue-lightest;
+    @apply bg-purple-darker text-purple-lightest;
 
     &:hover {
-      @apply text-blue-light;
+      @apply text-purple-light;
     }
   }
 
   &-secondary {
-    @apply bg-transparent border-2 border-blue-dark text-blue-dark;
+    @apply bg-transparent border-2 border-purple-dark text-purple-dark;
 
     &:hover {
-      @apply bg-blue-dark text-blue-lightest;
+      @apply bg-purple-dark text-purple-lightest;
     }
   }
 }

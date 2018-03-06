@@ -1,5 +1,9 @@
 .nav-container {
-  @apply flex bg-blue-lighter border-t-4 border-blue-darkest;
+  @apply flex bg-purple-dark border-purple-lightest;
+
+  @screen lg {
+    @apply border-t-4;
+  }
 
   nav {
     @apply flex flex-col;
@@ -9,7 +13,7 @@
     }
 
     .menu-toggle {
-      @apply text-blue-darker;
+      @apply text-purple-lightest;
       &-open {
         @apply fill-current;
       }
@@ -24,14 +28,24 @@
     }
 
     a.logo {
-      @apply inline-flex no-underline items-center font-semibold uppercase tracking-wide content-center px-4 py-2 text-blue-darker;
+      @apply inline-flex no-underline items-center font-semibold uppercase tracking-wide content-center px-4 py-2 text-purple-lightest;
     }
 
     .items {
-      @apply flex flex-grow flex-col border-t border-b bg-blue-lightest;
+      @apply flex flex-grow flex-col border-t border-b bg-purple-lightest;
 
       @screen lg {
         @apply flex-row border-0 bg-transparent;
+      }
+    }
+
+    .btn-secondary {
+      @screen lg {
+        @apply bg-transparent border-2 border-purple-lightest text-purple-lightest;
+
+        &:hover {
+          @apply bg-purple-lightest text-purple-dark;
+        }
       }
     }
 
@@ -46,7 +60,11 @@
         @apply block px-4 py-2 mb-2;
 
         &.current > a {
-          @apply text-blue-dark;
+          @apply text-purple-light;
+
+          @screen lg {
+            @apply text-purple-lightest;
+          }
         }
 
         @screen lg {
@@ -54,10 +72,14 @@
         }
 
         a {
-          @apply text-blue no-underline;
+          @apply text-purple no-underline;
 
           &:hover {
-            @apply text-blue-darker;
+            @apply text-purple-darker;
+          }
+
+          @screen lg {
+            @apply text-purple-lightest;
           }
         }
       }
