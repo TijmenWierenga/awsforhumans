@@ -1,6 +1,18 @@
 .alert {
   @apply flex border-0 border-l-4 border-grey p-4 bg-grey-lightest;
 
+  &-success {
+    @apply border-green bg-green-lightest;
+
+    > .alert-dismiss {
+      @apply text-green;
+
+      &:hover {
+        @apply text-green-dark;
+      }
+    }
+  }
+
   &-content {
     @apply flex flex-grow flex-col;
 
