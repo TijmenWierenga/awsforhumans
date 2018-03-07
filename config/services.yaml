@@ -28,4 +28,4 @@ services:
     # please note that last definitions always *replace* previous ones
 
     Contentful\Delivery\Client:
-        arguments: ["%env(CONTENTFUL_DELIVERY_API_TOKEN)%", "%env(CONTENTFUL_SPACE_ID)%"]
+        arguments: ["%env(CONTENTFUL_DELIVERY_API_TOKEN)%", "%env(CONTENTFUL_SPACE_ID)%", "%env(CONTENTFUL_PREVIEW_MODE)%", "en-US"]
