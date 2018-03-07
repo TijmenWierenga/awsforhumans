@@ -1,5 +1,5 @@
 .nav-container {
-  @apply flex bg-purple-dark border-purple-lightest;
+  @apply flex bg-grey-lighter border-purple-dark;
 
   @screen lg {
     @apply border-t-4;
@@ -13,7 +13,7 @@
     }
 
     .menu-toggle {
-      @apply text-purple-lightest;
+      @apply text-purple-dark;
       &-open {
         @apply fill-current;
       }
@@ -28,11 +28,11 @@
     }
 
     a.logo {
-      @apply inline-flex no-underline items-center font-semibold uppercase tracking-wide content-center px-4 py-2 text-purple-lightest;
+      @apply inline-flex no-underline items-center font-semibold uppercase tracking-wide content-center px-4 py-2 text-purple-dark;
     }
 
     .items {
-      @apply flex flex-grow flex-col border-t border-b bg-purple-lightest;
+      @apply flex flex-grow flex-col border-t border-b bg-purple-dark;
 
       @screen lg {
         @apply flex-row border-0 bg-transparent;
@@ -40,11 +40,13 @@
     }
 
     .btn-secondary {
+      @apply bg-transparent border-2 border-purple-lightest text-purple-lightest;
+
       @screen lg {
-        @apply bg-transparent border-2 border-purple-lightest text-purple-lightest;
+        @apply bg-transparent border-2 border-purple-dark text-purple-dark;
 
         &:hover {
-          @apply bg-purple-lightest text-purple-dark;
+          @apply bg-purple-dark text-purple-lightest;
         }
       }
     }
@@ -60,10 +62,10 @@
         @apply block px-4 py-2 mb-2;
 
         &.current > a {
-          @apply text-purple-light;
+          @apply text-purple-lightest;
 
           @screen lg {
-            @apply text-purple-lightest;
+            @apply text-purple-dark;
           }
         }
 
@@ -72,14 +74,14 @@
         }
 
         a {
-          @apply text-purple no-underline;
+          @apply text-purple-lighter no-underline;
 
           &:hover {
             @apply text-purple-darker;
           }
 
           @screen lg {
-            @apply text-purple-lightest;
+            @apply text-purple-dark;
           }
         }
       }
