@@ -1,79 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title 'This should be the name of the article'%}
+{% block title article.getTitle %}
 
 {% block sidebar_left %}
+    {% for author in article.getAuthors %}
     <div class="author">
         <div>
-            <img src="https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/25310955_10156204238410166_3167002980915933243_o.jpg?oh=d376be752743e4c57f49bbf01a6228ae&oe=5B4C045B"
-                 alt="Tijmen Wierenga">
+            <img src="{{ author.getProfileImage.getFile.getUrl }}"
+                 alt="{{ author.getFirstName }} {{ author.getLastName }}'s profile picture">
         </div>
         <div class="info flex-grow lg:flex-no-grow">
             <span class="title text-purple-dark">Author</span>
-            <span class="block text-sm">Tijmen Wierenga</span>
+            <span class="block text-sm">{{ author.getFirstName }} {{ author.getLastName }}</span>
         </div>
         <div class="info hidden lg:block">
             <span class="title text-purple-dark">About</span>
-            <span class="block text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque consequatur deleniti doloribus, et eveniet ex, fuga hic id itaque libero maiores nam nesciunt omnis optio pariatur placeat quas quis quo, reiciendis sint voluptates.</span>
+            <span class="block text-sm">{{ author.getBio }}</span>
         </div>
     </div>
+    {% endfor %}
 {% endblock %}
 
 {% block content %}
-    <alert class="alert-success mb-4 lg:mb-8"
-           title="Registration success"
-           message="So this is a wonderful message explaining why something happened!"></alert>
     <article>
+        {% if article.getIsPremium %}
         <span class="tag tag-pill mb-4">Premium</span>
+        {% endif %}
+        {% if article.getVideo is not null %}
         <video controls>
-            <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+            <source src="{{ article.getVideo.getFile.getUrl }}" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias architecto earum impedit
-            incidunt inventore, minus nihil non odit perspiciatis, sint tempora unde velit! Animi cupiditate
-            ducimus eos facilis, ipsum iste labore obcaecati odit perspiciatis quis reprehenderit
-            repudiandae sunt temporibus tenetur totam vel voluptate? A alias amet aut corporis deleniti
-            deserunt dolores dolorum eos inventore ipsum iusto libero mollitia nisi nostrum recusandae,
-            saepe sit voluptas. Accusamus aliquam amet aut culpa cumque cupiditate, dicta distinctio ea eum
-            fugit ipsum iure libero, nemo perferendis quisquam quos voluptate? A atque consectetur
-            consequuntur delectus eaque iusto libero molestiae natus nostrum, perferendis quaerat quis,
-            vitae.</p>
-        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</blockquote>
-        <p>Consectetur error esse exercitationem harum illum laborum magnam odio odit tempore temporibus?
-            Autem earum possimus velit! Ad autem, cumque dicta dolor earum excepturi illo ipsam libero nisi
-            pariatur possimus praesentium suscipit tempora. Adipisci deserunt iusto placeat tempore.
-            Adipisci consequuntur dicta ex exercitationem facilis inventore nulla quaerat quos recusandae
-            temporibus? Alias architecto atque culpa debitis, dolorum eos hic libero, nemo nihil nostrum
-            odio optio qui quidem recusandae, repellendus vel voluptas! Aliquid atque consequatur
-            consequuntur corporis earum eos esse explicabo harum illo maiores non, nostrum odio odit porro,
-            quas quis, quos recusandae repellat saepe sint sit sunt ut velit veniam voluptates? Fuga!</p>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, tenetur.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi itaque quo
-            sapiente vero. Animi aut culpa cum deleniti dicta dolor est excepturi explicabo fugit hic
-            incidunt iste iure iusto laboriosam minima odio provident quam qui quidem quos, tempora
-            voluptas voluptates! Fugiat ipsum minima molestias sit vitae! Cumque, dolores, eum.</p>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cupiditate error quia tenetur.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aliquid aperiam beatae
-            cupiditate dolorum ea est ex fugiat id in inventore ipsa iure magni minus molestiae
-            molestias nemo nisi non officiis perspiciatis porro possimus quibusdam quidem voluptas
-            voluptatum. Adipisci atque autem culpa cupiditate debitis doloribus dolorum eligendi enim
-            facilis fuga inventore laudantium maxime nemo nihil, numquam omnis optio porro possimus quas
-            recusandae, sequi sit, sunt suscipit veniam voluptas. A aperiam dolore, doloremque error
-            excepturi facere hic illo impedit ipsa iusto magnam officia omnis pariatur quae, ratione
-            sapiente sint totam voluptas! Assumenda beatae dolor eos eum libero quidem rem sed?
-            Assumenda commodi consectetur distinctio doloremque eveniet, explicabo facere in incidunt
-            provident quae reiciendis reprehenderit veritatis. Aperiam eaque in ipsum obcaecati
-            voluptatibus.</p>
+        {% endif %}
+        <h1>{{ article.getTitle }}</h1>
+        {{ article.getBody|markdown }}
     </article>
 {% endblock %}
 
 {% block sidebar_right %}
     <div>
         <span class="title text-purple-darkest mb-4">Tags</span>
-        <span class="tag tag-pill tag-xs mb-2 mr-1">Automation</span>
-        <span class="tag tag-pill tag-xs mb-2 mr-1">Security</span>
-        <span class="tag tag-pill tag-xs mb-2 mr-1">Terraform</span>
-        <span class="tag tag-pill tag-xs mb-2 mr-1">AWS</span>
+        {% for tag in article.getTags %}
+        <span class="tag tag-pill tag-xs mb-2 mr-1">{{ tag.getName }}</span>
+        {% endfor %}
     </div>
 {% endblock %}

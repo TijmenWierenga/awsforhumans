@@ -27,6 +27,20 @@ class LessonController extends Controller
 
     public function index(string $slug): Response
     {
-        return $this->render('article.html.twig');
+        $query = new Query();
+        $query
+            ->setContentType('lesson')
+            ->where('fields.slug', $slug);
+        $result = $this->client->getEntries($query);
+
+        if (! $result->count()) {
+            // Not found exception
+        }
+
+        $resource = $result->offsetGet(0);
+
+        return $this->render('article.html.twig', [
+            'article' => $resource
+        ]);
     }
 }
