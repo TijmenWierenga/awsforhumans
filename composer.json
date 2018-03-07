@@ -5,6 +5,7 @@
         "php": "^7.1.3",
         "ext-iconv": "*",
         "contentful/contentful": "^2.4",
+        "knplabs/knp-markdown-bundle": "^1.7",
         "sensiolabs/security-checker": "^4.1",
         "symfony/asset": "^4.0",
         "symfony/console": "^4.0",
