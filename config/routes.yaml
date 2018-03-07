@@ -1,3 +1,7 @@
 home:
     path: /
     controller: AwsForHumans\Controller\HomeController::index
+
+lesson:
+    path: /lesson/{slug}
+    controller: AwsForHumans\Controller\LessonController::index
