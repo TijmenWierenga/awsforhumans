@@ -2,13 +2,14 @@
 namespace AwsForHumans\Controller;
 
 use Contentful\Delivery\Client;
+use Contentful\Delivery\Query;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @author Tijmen Wierenga <tijmen.wierenga@devmob.com>
  */
-class HomeController extends Controller
+class ArticleController extends Controller
 {
     /**
      * @var Client
@@ -16,7 +17,7 @@ class HomeController extends Controller
     private $client;
 
     /**
-     * HomeController constructor.
+     * ArticleController constructor.
      * @param Client $client
      */
     public function __construct(Client $client)
@@ -26,6 +27,7 @@ class HomeController extends Controller
 
     public function index(): Response
     {
+        die(dump($this->client->getEntries()));
         return $this->render('article.html.twig');
     }
 }
