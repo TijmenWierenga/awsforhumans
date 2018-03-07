@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * @author Tijmen Wierenga <tijmen.wierenga@devmob.com>
  */
-class ArticleController extends Controller
+class LessonController extends Controller
 {
     /**
      * @var Client
@@ -17,7 +17,7 @@ class ArticleController extends Controller
     private $client;
 
     /**
-     * ArticleController constructor.
+     * LessonController constructor.
      * @param Client $client
      */
     public function __construct(Client $client)
@@ -25,9 +25,8 @@ class ArticleController extends Controller
         $this->client = $client;
     }
 
-    public function index(): Response
+    public function index(string $slug): Response
     {
-        die(dump($this->client->getEntries()));
         return $this->render('article.html.twig');
     }
 }
