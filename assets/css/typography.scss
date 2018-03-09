@@ -1,3 +1,18 @@
 .title {
   @apply block uppercase text-xs font-bold tracking-wide;
 }
+
+.bullet {
+  &-checkmark {
+    &:before {
+      @apply inline-block mr-2;
+
+      content: '';
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url('../../public/images/icons/checkmark.svg') no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+    }
+  }
+}
