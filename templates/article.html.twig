@@ -1,47 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title article.getTitle %}
-
-{% block sidebar_left %}
-    {% for author in article.getAuthors %}
-    <div class="author">
-        <div>
-            <img src="{{ author.getProfileImage.getFile.getUrl }}"
-                 alt="{{ author.getFirstName }} {{ author.getLastName }}'s profile picture">
-        </div>
-        <div class="info flex-grow lg:flex-no-grow">
-            <span class="title text-purple-dark">Author</span>
-            <span class="block text-sm">{{ author.getFirstName }} {{ author.getLastName }}</span>
-        </div>
-        <div class="info hidden lg:block">
-            <span class="title text-purple-dark">About</span>
-            <span class="block text-sm">{{ author.getBio }}</span>
-        </div>
-    </div>
-    {% endfor %}
-{% endblock %}
+{% set title = article.getTitle %}
 
 {% block content %}
-    <article>
-        {% if article.getIsPremium %}
-        <span class="tag tag-pill mb-4">Premium</span>
-        {% endif %}
-        {% if article.getVideo is not null %}
-        <video controls>
-            <source src="{{ article.getVideo.getFile.getUrl }}" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-        {% endif %}
-        <h1>{{ article.getTitle }}</h1>
-        {{ article.getBody|markdown }}
-    </article>
-{% endblock %}
+    {% embed 'partials/sidebar_grid.html.twig' %}
+        {% block sidebar_left %}
+            {% for author in article.getAuthors %}
+                <div class="author">
+                    <div>
+                        <img src="{{ author.getProfileImage.getFile.getUrl }}"
+                             alt="{{ author.getFirstName }} {{ author.getLastName }}'s profile picture">
+                    </div>
+                    <div class="info flex-grow lg:flex-no-grow">
+                        <span class="title text-purple-dark">Author</span>
+                        <span class="block text-sm">{{ author.getFirstName }} {{ author.getLastName }}</span>
+                    </div>
+                    <div class="info hidden lg:block">
+                        <span class="title text-purple-dark">About</span>
+                        <span class="block text-sm">{{ author.getBio }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endblock %}
 
-{% block sidebar_right %}
-    <div>
-        <span class="title text-purple-darkest mb-4">Tags</span>
-        {% for tag in article.getTags %}
-        <span class="tag tag-pill tag-xs mb-2 mr-1">{{ tag.getName }}</span>
-        {% endfor %}
-    </div>
+        {% block main_content %}
+            <article>
+                {% if article.getIsPremium %}
+                    <span class="tag tag-pill mb-4">Premium</span>
+                {% endif %}
+                {% if article.getVideo is not null %}
+                    <video controls>
+                        <source src="{{ article.getVideo.getFile.getUrl }}" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                {% endif %}
+                <h1>{{ article.getTitle }}</h1>
+                {{ article.getBody|markdown }}
+            </article>
+        {% endblock %}
+
+        {% block sidebar_right %}
+            <div>
+                <span class="title text-purple-darkest mb-4">Tags</span>
+                {% for tag in article.getTags %}
+                    <span class="tag tag-pill tag-xs mb-2 mr-1">{{ tag.getName }}</span>
+                {% endfor %}
+            </div>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
