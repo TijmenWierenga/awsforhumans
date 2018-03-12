@@ -31,6 +31,7 @@
 
 @import "base";
 @import "background";
+@import "icon";
 @import "typography";
 
 @import "components/alert";
@@ -39,6 +40,8 @@
 @import "components/button";
 @import "components/nav";
 @import "components/tag";
+
+@import "../../node_modules/linearicons/dist/web-font/style.css";
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your

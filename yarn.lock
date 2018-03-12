@@ -3294,6 +3294,10 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+linearicons@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/linearicons/-/linearicons-1.0.1.tgz#335198d4b796b3193295dd391ada89b3140c0eb4"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
