@@ -2,6 +2,7 @@ require('../css/app.scss');
 
 import Vue from 'vue';
 import Alert from './components/Alert';
+import SubscriptionForm from './components/SubscriptionForm';
 import Navigation from './components/Navigation';
 import NavItem from './components/NavItem';
 
@@ -9,6 +10,7 @@ new Vue({
     el: "#app",
     components: {
         Alert,
+        SubscriptionForm,
         Navigation,
         NavItem
     },
